@@ -13,16 +13,12 @@
 
 
 
-To build a provider on Mule Runtime 3.8.x, perform this task.
+To build a provider from MuleSoft Consulting on Mule Runtime 3.8.x, perform this task.
 
 . Set up credentials in the Mule EE Repository. Create or add to the Maven `settings.xml` file. For example, on Linux `~/.m2/settings.xml`:
 +
 [source,xml,linenums]
 ----
-<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
-                          https://maven.apache.org/xsd/settings-1.0.0.xsd">
 ...
   <servers>
     <server>
@@ -48,37 +44,33 @@ To build a provider on Mule Runtime 3.8.x, perform this task.
       </repositories>
     </profile>
   </profiles>
-  <activeProfiles/>
-</settings>
 ----
 +
-. Download the link:_attachments/OAuthProviderStudioArchive.zip[OAuthProviderStudioArchive].
+. Download the OAuthProviderStudioArchive using the link at the bottom of this topic.
 . Launch Studio, and choose File > Import.
-+
-The Select dialog appears.
-+
-. Expand Anypoint Studio and select Anypoint Studio generated Deployable Archive.
+. In Select, expand Anypoint Studio and choose Anypoint Studio Generated Deployable Archive.
 . Browse to the `OAuthProviderStudioArchive.zip` you downloaded, and click Finish.
-. link:https://anypoint.mulesoft.com/login/#/signup[Log into your Anypoint platform] account.
-. link:/access-management/organization#client-id-and-client-secret[Access the client ID and client secret] of the account you are using to create the provider application.
-. Enter your client Id and client Secret in *Anypoint Studio* > *Preferences* > *Anypoint Studio* > *Anypoint Platform for APIs*. Alternatively, if you use the Mule command line, start Mule as follows:
+. Log into your Anypoint platform account.
+. Access the client ID and client secret of the account you are using to create the provider application.
+. Enter your client Id and client Secret in Anypoint Studio > Preferences > Anypoint Studio > Anypoint Platform for APIs. 
++
+This step is necessary to test the local provider. 
+. In Project Explorer, right-click the project name and select Run As > Mule Application with Maven.
+. In Configure Maven, enter your Maven installation home directory, and click Test Maven Configuration.
++
+Assuming the test was successful, click OK; otherwise, troubleshoot the Maven problem. The console reports that the app deployed. Next, test the local provider.
+
+== Downloads
+
+link:_attachments/OAuthProviderStudioArchive.zip[OAuthProviderStudioArchive]
+
+///
+Alternatively, if you use the Mule command line, start Mule as follows:
 +
 ----
 ${MULE_HOME}/bin/mule -M-Danypoint.platform.client_id=client_ID -M-Danypoint.platform.client_secret=client_secret start
 ----
-+
-This step is necessary to [test the local provider]. 
-. In Project Explorer, select the project name oauth2-cust-provider, right-click, and select *Run As* > *Mule Application with Maven*.
-+
-The Configure Maven dialog appears.
-+
-. Enter your Maven installation home directory, and click *Test Maven Configuration*.
-+
-Assuming the test was successful, click OK; otherwise, troubleshoot the Maven problem.
-+
-The console reports that the app deployed. Next, test the local provider.
-
-Now, you are ready to test the provider.
+///
 
 == See Also
 
@@ -86,3 +78,4 @@ Now, you are ready to test the provider.
 * link:/api-manager/external-oauth-2.0-token-validation-policy[Access Token Enforcement Using External Provider policy]
 * link:/api-manager/aes-oauth-faq#about-oauth-provider-models[About the External OAuth 2.0 provider]
 * link:/access-management/external-identity[External Identity (setting up PingFederate and OpenAM providers)]
+* . link:/access-management/organization#client-id-and-client-secret[Access the client ID and client secret]

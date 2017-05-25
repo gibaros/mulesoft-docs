@@ -1,6 +1,6 @@
 = About the OAuth Dance 
 
-The OAuth 2.0 Access Token Enforcement Using External Provider policy enforces the OAuth process. The process, called the dance, between the Mule OAuth 2.0 provider, API, and client application conforms to RFC 6749. 
+The authentication process performed by the Mule OAuth 2.0 provider, API, and client application conforms to RFC 6749. This process is called the OAuth Dance.
 
 image::oauth+policy1.png[oauth+policy1,height=366,width=640]
 
