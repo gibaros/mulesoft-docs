@@ -17,32 +17,17 @@ Example: Configure an HTTP or Salesforce connector in the app to access OAuth-pr
 +
 * Protecting an API from unauthorized calls from client applications
 +
-Example: To your API, apply an OAuth 2.0 policy and configure an OAuth provider to deny access to unauthenticated client apps.
+Example: Apply an OAuth 2.0 policy and your configured OAuth provider denies access to unauthenticated client apps.
 
-The following OAuth policies and providers are available for protecting Mule apps:
+You can use the following OAuth provider and policy pairs:
 
 * PingFederate provider and PingFederate OAuth Token Enforcement policy
 * OpenAM provider and OpenAM OAuthToken Enforcement policy
 * Mule OAuth 2.0 provider and OAuth 2.0 Access Token Enforcement Using External Provider policy
 
-Using PingFederate or OpenAM is recommended.
+The API to which you apply an OAuth 2.0 policy supports HTTPS communication using a Mule OAuth 2.0 provider. The provider verifies the validity of OAuth 2.0 credentials. 
 
-// add OpenID Connect
-
-== About the Mule OAuth Provider
-
-If you do not want to contract with an organization, such as PingFederate or OpenAM, you need to build a Mule OAuth provider. The OAuth 2.0 Access Token Enforcement Using External Provider policy supports HTTPS communication using a Mule OAuth 2.0 provider. The provider verifies the validity of OAuth 2.0 credentials. The Mule OAuth provider can run on any application server that is in the same organization as your OAuth-protected API. For example, you can run the Mule provider on premises using a Tomcat server or in the cloud using CloudHub. 
-
-If you are using the deprecated AES OAuth policy provider for non-production environments, the policy as-is is working for you, and can accept tokens exchanged by HTTP (and not HTTPS), no change is required; otherwise, migrate to a Mule OAuth provider as follows:
-
-* Customize the Mule OAuth provider to replace the deprecated one.
-+
-On Exchange, you can download one provider that supports user/password or another that support LDAP.
-+
-* Remove policies from the affected APIs.
-* Reapply policies.
-
-Your existing registered apps, client IDs, and client secrets continue working.
+Using a PingFederate or OpenAM provider is recommended. If you do not want to contract with an organization, such as PingFederate or OpenAM, you need to build a Mule OAuth provider. 
 
 == See Also
 
