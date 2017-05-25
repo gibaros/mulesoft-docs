@@ -1,0 +1,20 @@
+= About Building a Mule OAuth 2.0 Provider
+
+You build a Mule OAuth 2.0 provider when you don't want to use the federated providers that are recommended: PingFederate or OpenAM. You can download and import a custom Mule OAuth provider, developed by MuleSoft Consulting, into Anypoint Studio. In Studio, you build the sample provider, and then you run the provider to authenticate credentials against a security service. 
+
+In the Mule OAuth provider, you need to configure the credentials, for example the client ID and client secret of the Anypoint Platform organization in which you register the managed API. 
+
+Build an external (Mule) OAuth provider application on one of the following installations:
+
+* Mule 3.8.0 runtime or later
+* API Gateway runtime 2.0 or earlier
+
+To build the provider on API Gateway runtime 2.0 or earlier, download the Gateway Runtime 2.0 version of the External OAuth 2.0 server for Anypoint Platform from Exchange:
+
+`+https://anypoint.mulesoft.com/exchange+`.
+
+Use the following software and steps in this procedure:
+
+* Anypoint Studio 6.x with Mule Runtime EE 3.8 or later
+* Java JDK 1.8
+* Maven 3.3.9

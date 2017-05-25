@@ -1,20 +1,11 @@
-= About Configuring an API for OAuth 2.0 Protection
+= About OAuth Policy Prerequisites
 :keywords: oauth, raml, token, validation, policy
 
-The following policies are available for authorization:
-
-* PingFederate OAuth Token Enforcement policy
-* OpenAM OAuth Token Enforcement Policy
-* OAuth 2.0 Access Token Enforcement Using External Provider policy
-
-Using the PingFederate or OpenAM policy is recommended.
-
-Prerequisites for using one of these policies are:
+Prerequisites for using an OAuth 2.0 policy to protect an API are:
 
 * Applying the policy to the API
-* Having access to an link:/api-manager/aes-oauth-faq#about-oauth-provider-models[external OAuth 2.0 provider]
-
-== Requirements for RAML APIs
+* Having an OAuth 2.0 provider
+* A securityScheme if the API is RAML-based
 
 If the API protected by one of the Anypoint Platform authorization policies is defined using RAML (recommended), define link:https://github.com/raml-org/raml-spec/blob/master/versions/raml-10/raml-10.md#oauth-20[RAML securitySchemes] for OAuth 2.0. Within the RAML securitySchemes definition, you include URIs for the authorization and access token. The following example shows URIs for a Mule OAuth 2.0 provider:
 
@@ -46,6 +37,9 @@ The following table shows the mapping of the RAML grant types to the grant type 
 |`[authorization_code]` |Authorization Code |Yes
 |===
 
-== Next
+After meeting these prerequisites, you are ready to build the provider.
 
-link:/api-manager/building-an-external-oauth-2.0-provider-application[Build an external OAuth 2.0 provider].
+== See Also
+
+* link:/api-manager/aes-oauth-faq#about-oauth-provider-models[external OAuth 2.0 provider]
+* link:/api-manager/building-an-external-oauth-2.0-provider-application[Build an external OAuth 2.0 provider].

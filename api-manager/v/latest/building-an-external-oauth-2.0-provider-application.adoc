@@ -12,29 +12,8 @@
 :meta-applies-to: PingFederate, OpenAM
 
 
-To use the OAuth 2.0 Access Token Enforcement Using External Provider policy, you need an external OAuth 2.0 provider. One of the following external identity providers are recommended:
 
-* PingFederate
-* OpenAM
-
-You can also download and import a custom Mule OAuth provider, developed by MuleSoft Consulting, into Anypoint Studio. In Studio, you build the sample provider, and then you run the provider to authenticate credentials against a security service. 
-
-In the Mule OAuth provider, you need to configure the credentials, for example the client ID and client secret of the Anypoint Platform organization in which you register the managed API. 
-
-Build an external (Mule) OAuth provider application on one of the following installations:
-
-* Mule 3.8.0 runtime or later
-* API Gateway runtime 2.0 or earlier
-+
-To build the provider on API Gateway runtime 2.0 or earlier, download the Gateway Runtime 2.0 version of the External OAuth 2.0 server for Anypoint Platform from link:https://anypoint.mulesoft.com/exchange[Exchange].
-
-Use the following software and steps in this procedure:
-
-* Anypoint Studio 6.x with Mule Runtime EE 3.8 or later
-* Java JDK 1.8
-* Maven 3.3.9
-
-*To build the provider on Mule Runtime 3.8.x:*
+To build a provider on Mule Runtime 3.8.x, perform this task.
 
 . Set up credentials in the Mule EE Repository. Create or add to the Maven `settings.xml` file. For example, on Linux `~/.m2/settings.xml`:
 +
@@ -99,12 +78,11 @@ Assuming the test was successful, click OK; otherwise, troubleshoot the Maven pr
 +
 The console reports that the app deployed. Next, test the local provider.
 
+Now, you are ready to test the provider.
+
 == See Also
 
+* link:/api-manager/to-test-local-provider[Test the provider]
 * link:/api-manager/external-oauth-2.0-token-validation-policy[Access Token Enforcement Using External Provider policy]
 * link:/api-manager/aes-oauth-faq#about-oauth-provider-models[About the External OAuth 2.0 provider]
 * link:/access-management/external-identity[External Identity (setting up PingFederate and OpenAM providers)]
-
-== Next
-
-link:/api-manager/to-test-local-provider[Test the local provider]
