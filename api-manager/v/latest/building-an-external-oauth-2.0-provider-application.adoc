@@ -15,7 +15,7 @@
 
 To build a provider from MuleSoft Consulting on Mule Runtime 3.8.x, perform this task.
 
-. Set up credentials in the Mule EE Repository. Create or add to the Maven `settings.xml` file. For example, on Linux `~/.m2/settings.xml`:
+. Set up credentials in the Mule EE Repository by creating, or by adding the credentials to, the Maven `settings.xml` file. This file is typically located in `~/.m2/settings.xml` on Linux or Mac OSX:
 +
 [source,xml,linenums]
 ----
@@ -64,13 +64,13 @@ Assuming the test was successful, click OK; otherwise, troubleshoot the Maven pr
 
 link:_attachments/OAuthProviderStudioArchive.zip[OAuthProviderStudioArchive]
 
-///
+////
 Alternatively, if you use the Mule command line, start Mule as follows:
 +
 ----
 ${MULE_HOME}/bin/mule -M-Danypoint.platform.client_id=client_ID -M-Danypoint.platform.client_secret=client_secret start
 ----
-///
+////
 
 == See Also
 
