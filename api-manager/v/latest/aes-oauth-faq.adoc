@@ -27,7 +27,7 @@ You can use the following OAuth provider and policy pairs:
 
 The API to which you apply an OAuth 2.0 policy supports HTTPS communication using a Mule OAuth 2.0 provider. The provider verifies the validity of OAuth 2.0 credentials. 
 
-Using a PingFederate or OpenAM provider is recommended. If you do not want to contract with an organization, such as PingFederate or OpenAM, you need to build a Mule OAuth provider. Instead of building the provider from the ground up, you can download and import a custom Mule OAuth provider, developed by MuleSoft Consulting, into Anypoint Studio.
+Using a PingFederate or OpenAM provider is recommended. If you don't want to contract with PingFederate or OpenAM, you need to build a Mule OAuth provider. Instead of building the provider from the ground up, you can download and import a custom Mule OAuth provider, developed by MuleSoft Consulting, into Anypoint Studio.
 
 == See Also
 
