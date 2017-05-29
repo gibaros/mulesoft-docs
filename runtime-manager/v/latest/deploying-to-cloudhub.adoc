@@ -357,7 +357,7 @@ If an error occurs and the application cannot be deployed, the application statu
 
 * See a tutorial about deploying to CloudHub directly from Anypoint Studio link:/getting-started/deploy-to-cloudhub[Deploy to CloudHub]
 * Read more about what link:/runtime-manager/cloudhub[CloudHub] is and what features it has
-* link:/runtime-manager/managing-deployed-applications[Managing Deployed Applications] contains general information about hoy to manage your application once deployed
+* link:/runtime-manager/managing-deployed-applications[Managing Deployed Applications] contains general information about how to manage your application once deployed
 * link:/runtime-manager/managing-applications-on-cloudhub[Managing Applications on CloudHub] contains more information on how to manage your applications with setting that are specific to CloudHub
 * link:/runtime-manager/monitoring[Monitoring Applications] shows you how you can set up email alerts for whenever certain events occur with your application or workers
 * link:/runtime-manager/developing-applications-for-cloudhub[Developing Applications for CloudHub]
